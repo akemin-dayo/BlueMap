@@ -41,6 +41,7 @@ println("Git hash: $gitHash" + if (clean) "" else " (dirty)")
 group = "de.bluecolored.bluemap"
 version = lastVersion +
         (if (commits == "0") "" else "-$commits") +
+        "~akemi-git-" + "$gitHash" + 
         (if (clean) "" else "-dirty")
 
 System.setProperty("bluemap.version", version.toString())
